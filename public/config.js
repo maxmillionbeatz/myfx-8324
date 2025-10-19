@@ -12,7 +12,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_ENABLE_ABSTRACT_WALLET": "false",
   "VITE_DISABLE_EVM_WALLETS": "false",
   "VITE_DISABLE_SOLANA_WALLETS": "false",
-  "VITE_WALLETCONNECT_PROJECT_ID": "",
+  "VITE_WALLETCONNECT_PROJECT_ID": "4208154807ae7292059b79bec13d9e70",
   "VITE_APP_NAME": "OKLONG",
   "VITE_APP_DESCRIPTION": "Decentralized exchange to trade crypto & stocks without KYC",
   "VITE_HAS_PRIMARY_LOGO": "false",
