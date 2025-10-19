@@ -99,3 +99,7 @@ html, body {
   font-size: 16px !important;
 }
 
+.oui-box.oui-flex.oui-flex-row.oui-items-center.oui-justify-start.oui-flex-nowrap.oui-gap-1.oui-scaffold-footer-powered-by {
+    display: none;
+}
+
