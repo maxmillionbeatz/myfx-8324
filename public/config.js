@@ -15,7 +15,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_WALLETCONNECT_PROJECT_ID": "4208154807ae7292059b79bec13d9e70",
   "VITE_APP_NAME": "OKLONG",
   "VITE_APP_DESCRIPTION": "Decentralized exchange to trade crypto & stocks without KYC",
-  "VITE_HAS_PRIMARY_LOGO": "false",
+  "VITE_HAS_PRIMARY_LOGO": "true",
   "VITE_HAS_SECONDARY_LOGO": "false",
   "VITE_ENABLED_MENUS": "Portfolio,Rewards,Swap,Markets,Trading",
   "VITE_CUSTOM_MENUS": "",
