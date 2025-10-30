@@ -4,6 +4,8 @@ node_modules
 /build
 .npmrc
 .specstory
+.DS_STORE
+.env
 # SpecStory explanation file
 .specstory/.what-is-this.md
 /public/manifest.json

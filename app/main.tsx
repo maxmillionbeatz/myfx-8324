@@ -117,6 +117,35 @@ const router = createBrowserRouter([
     ],
   },
 ], { basename: basePath });
+// 🔍 Intercept all fetch calls globally
+const originalFetch = window.fetch;
+window.fetch = async (...args) => {
+  const response = await originalFetch(...args);
+
+  try {
+    // check if the request was to /v1/register_account
+    if (typeof args[0] === "string" && args[0].includes("/v1/register_account")) {
+      const clone = response.clone();
+      const data = await clone.json();
+      if (data?.success && data?.data?.account_id) {
+        console.log("🟢 New Orderly account created:", data.data);
+
+        // fire Google Analytics event here
+        if ((window)?.gtag) {
+          window.gtag("event", "sign_up", {
+            method: "orderly_register",
+            account_id: data.data.account_id,
+            user_id: data.data.user_id,
+          });
+        }
+      }
+    }
+  } catch (err) {
+    // silently ignore non-JSON responses
+  }
+
+  return response;
+};
 
 loadRuntimeConfig().then(() => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
