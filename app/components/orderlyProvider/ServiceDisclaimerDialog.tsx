@@ -56,6 +56,9 @@ const ServiceDisclaimerDialog = () => {
       size="sm"
       closable={false}
       actions={actions}
+      contentProps={{
+        onInteractOutside: (event) => event.preventDefault(),
+      }}
     >
       <div className="space-y-6">
         <h2 className="text-xl font-semibold text-white">Service Disclaimer</h2>

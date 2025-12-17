@@ -9,7 +9,7 @@ import { getRuntimeConfigBoolean, getRuntimeConfigArray, getRuntimeConfig } from
 import { createSymbolDataAdapter } from "@/utils/symbol-filter";
 import { DemoGraduationChecker } from "@/components/DemoGraduationChecker";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
-import ServiceDisclaimerDialog from "./ServiceRestrictionsDialog";
+import ServiceDisclaimerDialog from "./ServiceDisclaimerDialog";
 
 const NETWORK_ID_KEY = "orderly_network_id";
 
