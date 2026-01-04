@@ -8,11 +8,11 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "sitemap": "node scripts/generate-sitemap.js",
-    "build": "node scripts/generate-sitemap.js && tsx scripts/generate-manifest.ts && NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-manifest.ts && cp _headers build/client/_headers",
+    "build": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-manifest.ts && NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-manifest.ts && cp _headers build/client/_headers",
     "build:spa": "tsx scripts/generate-manifest.ts && NODE_OPTIONS='--max-old-space-size=8192' tsx build.ts && tsx scripts/generate-manifest.ts && cp _headers build/client/_headers",
     "dev": "tsx scripts/generate-manifest.ts && vite",
     "generate:manifest": "tsx scripts/generate-manifest.ts",
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "preview": "vite preview",
     "typecheck": "tsc"
