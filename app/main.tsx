@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import { withBasePath } from './utils/base-path';
-import { getRuntimeConfig } from './utils/runtime-config';
 
 import './styles/index.css';
 
@@ -50,37 +48,12 @@ async function loadRuntimeConfig() {
   });
 }
 
-function loadAnalytics() {
-  const analyticsScript = getRuntimeConfig('VITE_ANALYTICS_SCRIPT');
-
-  if (analyticsScript) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(analyticsScript, 'text/html');
-    const scripts = doc.querySelectorAll('script');
-    
-    scripts.forEach((originalScript) => {
-      const newScript = document.createElement('script');
-      
-      Array.from(originalScript.attributes).forEach((attr) => {
-        newScript.setAttribute(attr.name, attr.value);
-      });
-      
-      if (originalScript.textContent) {
-        newScript.textContent = originalScript.textContent;
-      }
-      
-      document.head.appendChild(newScript);
-    });
-  }
-}
-
 const basePath = import.meta.env.BASE_URL || '/';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <ErrorBoundary />,
     children: [
       { index: true, element: <IndexPage /> },
       {
@@ -171,8 +144,6 @@ const router = createBrowserRouter([
 // };
 
 loadRuntimeConfig().then(() => {
-  loadAnalytics();
-  
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <HelmetProvider>
