@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import { withBasePath } from './utils/base-path';
+import { SharePnLConfig, SharePnLDialogWidget } from '@orderly.network/ui-share';
 
 import './styles/index.css';
+import { SharePnl } from './pages/share/Index';
 
 const IndexPage = lazy(() => import('./pages/Index'));
 const PerpLayout = lazy(() => import('./pages/perp/Layout'));
@@ -31,6 +33,7 @@ const VaultsLayout = lazy(() => import('./pages/vaults/Layout'));
 const VaultsIndex = lazy(() => import('./pages/vaults/Index'));
 const SwapLayout = lazy(() => import('./pages/swap/Layout'));
 const SwapIndex = lazy(() => import('./pages/swap/Index'));
+const SwapSymbol = lazy(() => import('./pages/swap/Symbol'));
 
 async function loadRuntimeConfig() {
   return new Promise<void>((resolve) => {
@@ -112,8 +115,15 @@ const router = createBrowserRouter([
         element: <SwapLayout />,
         children: [
           { index: true, element: <SwapIndex /> },
+          { path: ':pair', element: <SwapSymbol /> },
+
         ],
       },
+      {
+        path: 'share',
+        element: <SharePnl />,
+      },
+
     ],
   },
 ], { basename: basePath });
