@@ -23,7 +23,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "true",
   "VITE_ENABLE_CAMPAIGNS": "false",
   "VITE_TELEGRAM_URL": "",
-  "VITE_DISCORD_URL": "https://discord.gg/pDRZmyVw",
+  "VITE_DISCORD_URL": "https://discord.gg/oklong",
   "VITE_TWITTER_URL": "https://x.com/oklong_io",
   "VITE_SEO_SITE_NAME": "OKLong",
   "VITE_SEO_SITE_DESCRIPTION": "Decentralized exchange to trade crypto & stocks without KYC",
