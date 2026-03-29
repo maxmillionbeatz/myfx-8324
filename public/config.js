@@ -20,7 +20,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_HAS_SECONDARY_LOGO": "true",
   "VITE_ENABLED_MENUS": "Portfolio,Rewards,Swap,Markets,Trading,Leaderboard",
   "VITE_CUSTOM_MENUS": "",
-  "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "true",
+  "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "false",
   "VITE_ENABLE_CAMPAIGNS": "false",
   "VITE_TELEGRAM_URL": "",
   "VITE_DISCORD_URL": "https://discord.gg/oklong",
