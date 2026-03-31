@@ -18,7 +18,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_APP_DESCRIPTION": "Decentralized exchange to trade crypto & stocks without KYC",
   "VITE_HAS_PRIMARY_LOGO": "true",
   "VITE_HAS_SECONDARY_LOGO": "true",
-  "VITE_ENABLED_MENUS": "Portfolio,Rewards,Swap,Markets,Trading,Leaderboard",
+  "VITE_ENABLED_MENUS": "Portfolio,Rewards,Swap,Markets,Trading,Leaderboard,Campaigns",
   "VITE_CUSTOM_MENUS": "",
   "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "false",
   "VITE_ENABLE_CAMPAIGNS": "false",
