@@ -10,6 +10,7 @@ import { createSymbolDataAdapter } from "@/utils/symbol-filter";
 import { DemoGraduationChecker } from "@/components/DemoGraduationChecker";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 import ServiceDisclaimerDialog from "./ServiceDisclaimerDialog";
+import { SettleSubAccountPatch } from "./SettleSubAccountPatch";
 
 const NETWORK_ID_KEY = "orderly_network_id";
 
@@ -171,7 +172,8 @@ const OrderlyProvider = (props: { children: ReactNode }) => {
 				customRestrictedRegions: getRuntimeConfigArray('VITE_RESTRICTED_REGIONS'),
 			}}
 		>
-			<DemoGraduationChecker />
+			<SettleSubAccountPatch />
+				<DemoGraduationChecker />
 			<ServiceDisclaimerDialog />
 			{props.children}
 		</OrderlyAppProvider>
